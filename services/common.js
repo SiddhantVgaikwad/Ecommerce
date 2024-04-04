@@ -6,7 +6,7 @@ let transporter = nodemailer.createTransport({
   port: 587,
   secure: false, // true for 465, false for other ports
   auth: {
-    user: 'siddhant111222@gmail.com', // gmail
+    user: 'siddhanat111222@gmail.com', // gmail
     pass: process.env.MAIL_PASSWORD, // pass
   },
 });
@@ -25,6 +25,8 @@ exports.cookieExtractor = function (req) {
   if (req && req.cookies) {
     token = req.cookies['jwt'];
   }
+  //TODO : this is temporary token for testing without cookie
+  // token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWJmNzViOWI3OWFkMTNiMTUxNWQ0MCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjgzNzQ4ODY3fQ.DyMEFgayuvUGrzvPHIxmCJWi4xstvp4hR-dRSBjRNhE"
   return token;
 };
 
