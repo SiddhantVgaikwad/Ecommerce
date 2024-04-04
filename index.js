@@ -30,15 +30,6 @@ console.log(process.env)
 
   // send mail with defined transport object
 
-
-  
-
-
-
-
-
-
-
 // Webhook
 
 // TODO: we will capture actual order after deploying out server live on public URL
